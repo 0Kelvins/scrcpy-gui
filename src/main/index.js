@@ -16,9 +16,9 @@ const winURL = process.env.NODE_ENV === 'development'
 	: `file://${__dirname}/index.html`
 
 function createWindow() {
-  /**
-   * Initial window options
-   */
+	/**
+	 * Initial window options
+	 */
 	mainWindow = new BrowserWindow({
 		height: 800,
 		width: 513,
@@ -42,14 +42,22 @@ function createWindow() {
 	mainWindow.once('ready-to-show', () => {
 		mainWindow.show()
 	})
-	mainWindow.on('close', () => {
+
+	mainWindow.on('minimize', (e) => {
+		e.preventDefault()
+		mainWindow.hide()
+		mainWindow.setSkipTaskbar(false)
+	})
+
+	mainWindow.on('close', (e) => {
 		ipcMain.removeAllListeners('open')
 		ipcMain.removeAllListeners('connect')
 		ipcMain.removeAllListeners('disconnect')
 	})
 
-	mainWindow.on('closed', () => {
-		mainWindow = null
+	mainWindow.on('closed', e => {
+		mainWindow.destroy()
+		app.quit()
 	})
 
 	mainWindow.webContents.on('did-finish-load', function () {
@@ -57,22 +65,25 @@ function createWindow() {
 		ipcMain.on('open', scrcpy.open)
 		ipcMain.on('connect', adb.connect)
 		ipcMain.on('disconnect', adb.disconnect)
-
 	})
 }
 
 app.on('ready', createWindow)
 
-app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit()
-	}
-})
+// app.on('window-all-closed', () => {
+// 	if (process.platform !== 'darwin') {
+// 		app.quit()
+// 	}
+// })
 
 app.on('activate', () => {
 	if (mainWindow === null) {
 		createWindow()
 	}
+})
+
+app.on('before-quit', () => {
+	adb.killADB()
 })
 
 /**

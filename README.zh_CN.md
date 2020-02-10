@@ -6,72 +6,18 @@
 </div>
 <hr/>
 <p align="center">✨ <strong>一个简洁&漂亮的 scrcpy GUI 应用</strong></p>
-<p align="center">
-  <a href="https://github.com/feross/standard">
-    <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
-  </a>
-  <a href="https://github.com/Tomotoes/scrcpy-gui/releases">
-    <img src="https://img.shields.io/github/downloads/Tomotoes/scrcpy-gui/total.svg?style=flat-square" alt="">
-  </a>
-   <a href="https://travis-ci.org/Tomotoes/scrcpy-gui/builds">
-    <img src="https://img.shields.io/travis/Tomotoes/scrcpy-gui.svg?style=flat-square" alt="">
-  </a>
-  <a href="https://github.com/Tomotoes/scrcpy-gui/releases/latest">
-    <img src="https://img.shields.io/github/release/Tomotoes/scrcpy-gui.svg?style=flat-square" alt="">
-  </a>
-  <a href="https://gitter.im/scrcpy/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/scrcpy/community.svg?style=flat-square"></a>
-  <a href="https://opensource.org/licenses/GPL-3.0/"><img src="https://badges.frapsoft.com/os/gpl/gpl.svg?style=flat-square"></a>
-  <a href="https://github.com/Tomotoes/scrcpy-gui/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square"></a>
-</p>
-
-
 
 ## 💡简介
 
-<p align="center"><a href="https://jq.qq.com/?_wv=1027&k=5jxRe2o" target="_blank">点击链接加入QQ群聊【Scrcpy-GUI】</a></p><p align="center"><a href="https://mp.weixin.qq.com/s/JbD05YUlQ7NvSCsPJTm5nQ" target="_blank"><strong>Topbook:</strong> 不用花钱，三步投屏手机到任何电脑系统，支持高帧率录屏、电脑控制手机。</a></p>
-<p align="right"> 感谢 Topbook 平台的分享!</p>
-<div align=center><img width="508" height="785.6" src="https://cdn.jsdelivr.net/gh/Tomotoes/images/scrcpy-gui/Chinese.gif"/></div>
-<div align=center><img src="./screenshot.gif"/></div>
-
-[Scrcpy](https://github.com/Genymobile/scrcpy) 是由流行的`Android`模拟器`Genymotion`背后的团队创建的，但它本身并不是`Android`模拟器，它显示和控制通过`USB`（或通过`TCP/IP`）连接的`Android`设备，它不需要任何`root`访问权限，它适用于`GNU/Linux`、`Windows`和`MacOS`。
-
-`Scrcpy`的工作原理是在你的`Android`设备上运行服务器，桌面应用程序使用`USB`（或使用`ADB`隧道无线）进行通信。服务器流式传输设备屏幕的[H.264](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=en&sp=nmt4&tl=zh-CN&u=https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC&xid=25657,15700019,15700124,15700186,15700190,15700201,15700237,15700242,15700248&usg=ALkJrhiJZJWaUqBVRqUviQ4IlhKQCwqp_Q)视频。 客户端解码视频帧并显示它们。客户端捕获输入（键盘和鼠标）事件，将它们发送到服务器，服务器将它们注入设备。[文档](https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md)提供了更多详细信息。
-
-如果你想在桌面上看到你的`Android`屏幕与应用程序或内容进行交互，记录你的手机屏幕或执行其他基本任务，那`Scrcpy`就是一个好的选择。
-
-简而言之，`Scrcpy`是一种极好的方式，可以在你的计算机上轻松查看你的`Android`屏幕，并且可以实时与其进行交互。
-
-*引用自[云网牛站](https://ywnz.com/linuxsj/5581.html)*
-
-
+这个仓库是从[Tomotoes/scrcpy-gui](https://github.com/Tomotoes/scrcpy-gui)根据个人喜好修改而来的，自用
+<div align=center><img src="./screenshot.png"/></div>
 
 ## ✨亮点
 
-- **亮度** （原生，仅显示设备屏幕）
-- **表演** （30~60fps）
-- **质量** （1920×1080或以上）
-- **低延迟** （70~100ms）
-- **启动时间短** （显示第一张图像约1秒）
-- **非侵入性** （设备上没有安装任何东西）
-- **不需要 ROOT**
-- **有线无线都可连接**
-- **可以随便调整界面和码率**
-- **画面随意裁剪，自带录屏（手游直播利器）**
-- **支持多设备同时投屏**
-- **利用电脑的键盘和鼠标可以控制手机**
-- **把 APK 文件拖拽到电脑窗口即可安装应用到手机，把普通文件拖拽到窗口即可复制到手机**
-- **手机电脑共享剪贴板**
-- **自动检测USB连接的设备**
-- **可直接添加设备的局域网IP，达到无线控制的效果**
-- **将自动保存连接过的IP地址，下次输入时，自动提醒**
-- **支持设备别名**
-- **支持中英两种语言**
-- **Tray menu**
-- 等等等...
-
-*部分引用自[最美应用](http://zuimeia.com/app/6771/?platform=2)*
-
-
+2020年2月10日:
+- **增加了最小化到托盘**
+- **增加了退出程序后关闭adb**
+- 修改了一些UI组件
 
 ## 🌞要求
 
@@ -206,10 +152,6 @@
 
 ## 🎯开发
 
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue)@[8fae476](https://github.com/SimulatedGREG/electron-vue/tree/8fae4763e9d225d3691b627e83b9e09b56f6c935) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
-
-如果你有任何问题，欢迎提交 `Issues` 或 `PR`！
-
 ``` bash
 # install dependencies
 npm install
@@ -223,33 +165,3 @@ npm run build
 # lint all JS/Vue component files in `src/`
 npm run lint
 ```
-
-
-
-## 🤞贡献者
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Tomotoes"><img src="https://avatars1.githubusercontent.com/u/32236122?s=460&v=4" width="100px;" alt="Tomotoes"/><br /><sub><b>Simon Ma</b></sub></a><br /><a href="https://github.com/Tomotoes/scrcpy-gui/commits?author=Tomotoes" title="Code">💻</a> <a href="https://tomotoes.com">🎨</a></td>
-  </tr>
-</table>
-
-
-
-## 👀赞助
-
-如果你喜欢`scrcpy-gui`，并且它对你确实有帮助，欢迎给我打赏一杯咖啡哈~
-
-paypal: [https://paypal.me/tomotoes](https://paypal.me/tomotoes)
-
-支付宝：
-
-![alipay](https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/alipay.png)
-
-微信：
-
-![wechat](https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/wechat.png)
-
-## 📃协议
-
-**GNU GPLv3**

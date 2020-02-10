@@ -4,20 +4,20 @@ const { Menu, MenuItem } = remote
 
 export default (vue) => (tray, ...items) => {
 	const menu = new Menu()
-	menu.append(new MenuItem({
-		label: vue.$t('titleBar.document'),
-		click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui')
-	}))
+	// menu.append(new MenuItem({
+	// 	label: vue.$t('titleBar.document'),
+	// 	click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui')
+	// }))
 
-	menu.append(new MenuItem({
-		label: vue.$t('titleBar.checkForUpdates'),
-		click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui/releases')
-	}))
+	// menu.append(new MenuItem({
+	// 	label: vue.$t('titleBar.checkForUpdates'),
+	// 	click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui/releases')
+	// }))
 
-	menu.append(new MenuItem({
-		label: vue.$t('titleBar.feedback'),
-		click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui/issues')
-	}))
+	// menu.append(new MenuItem({
+	// 	label: vue.$t('titleBar.feedback'),
+	// 	click: () => remote.shell.openExternal('https://github.com/Tomotoes/scrcpy-gui/issues')
+	// }))
 	const submenu = []
 	if (!items.length) {
 		submenu.push({

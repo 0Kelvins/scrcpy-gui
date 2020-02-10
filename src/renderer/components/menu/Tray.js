@@ -1,12 +1,13 @@
-import { remote } from 'electron'
+import { app, remote } from 'electron'
 const { Tray, getCurrentWindow } = remote
 const window = getCurrentWindow()
 const tray = new Tray(`${__static}/icons/16x16.png`)
 
 export default Menu => {
-	const menu = Menu(tray,{ label: 'tray.hide', click() { window.hide() } }, {
+	const menu = Menu(tray, { label: 'tray.hide', click() { window.hide() } }, {
 		label: 'tray.exit', click() {
-			window.close()
+			window.destroy()
+			app.exit()
 		}
 	})
 

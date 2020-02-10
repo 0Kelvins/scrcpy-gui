@@ -7,7 +7,8 @@ export default vue => {
 	const tray = Tray(Menu)
 	window.tray = tray
 	new Titlebar({
-		backgroundColor: Color.fromHex('#868686'),
+		backgroundColor: Color.fromHex('#1f1f1f'),
+		color: Color.fromHex('#000000'),
 		shadow: true,
 		icon: 'https://cdn.jsdelivr.net/gh/Tomotoes/images/blog/favicon.ico',
 		maximizable: false,

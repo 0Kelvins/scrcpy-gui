@@ -1,18 +1,18 @@
 <template>
 	<el-header>
-		<span>{{ title }}</span>
+		<!-- <span>{{ title }}</span> -->
 	</el-header>
 </template>
 
 <script>
 export default {
-	name: 'LayoutHeader',
+	name: "LayoutHeader",
 	data() {
 		return {
-			title: 'Scrcpy',
-		}
+			title: "Scrcpy"
+		};
 	}
-}
+};
 </script>
 
 <style>
@@ -21,7 +21,7 @@ export default {
 
 	height: 5.2vh !important;
 	text-align: center;
-	background-color: #868686;
+	background-color: #1f1f1f;
 	color: #ececec;
 	font-size: 25px;
 	text-shadow: 1px 0px 4px #000;

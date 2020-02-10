@@ -1,7 +1,6 @@
 .DS_Store
 dist/electron/*
 dist/web/*
-build/*
 !build/icons
 !build/installer.nsh
 coverage
@@ -12,3 +11,4 @@ thumbs.db
 !.gitkeep
 yarn-error.log
 docs/dist/
+build/win-unpacked

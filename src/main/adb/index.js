@@ -77,6 +77,16 @@ const disconnect = ({ sender }, ip) => {
 	})
 }
 
+const killADB = sender => {
+	client.kill().then(() => {
+		debug('ADB shutdown')
+		sender.send('connect', { success: false, message: 'ADB shutdown succeeded' })
+	}).catch(err => {
+		debug(err)
+		sender.send('connect', { success: false, message: 'ADB shutdown failed' })
+	})
+}
+
 export default {
 	connect, disconnect, onDevices
 }

@@ -1,8 +1,8 @@
 version: 1.0.0
 files:
   - url: ScrcpyGui-1.0.0.exe
-    sha512: qtCcP0/q5hy87SHhuxaYv06d/nab1clynlf3lubICQQx0+dOvBY+EYKZm6Hus0tfdWWl2K3X7zEsVxRj1czyIg==
-    size: 38289063
+    sha512: jJfKRamYx0ZkRLOI/Ep0tS2LkiV3RlmLD5bxnWB2UpLuC8Gtl6S4tbinRbDlqgT/Y9M7fXBXtdg9xwQYQ8oIBg==
+    size: 38289127
 path: ScrcpyGui-1.0.0.exe
-sha512: qtCcP0/q5hy87SHhuxaYv06d/nab1clynlf3lubICQQx0+dOvBY+EYKZm6Hus0tfdWWl2K3X7zEsVxRj1czyIg==
-releaseDate: '2020-02-10T11:25:20.499Z'
+sha512: jJfKRamYx0ZkRLOI/Ep0tS2LkiV3RlmLD5bxnWB2UpLuC8Gtl6S4tbinRbDlqgT/Y9M7fXBXtdg9xwQYQ8oIBg==
+releaseDate: '2020-02-10T13:00:59.359Z'
